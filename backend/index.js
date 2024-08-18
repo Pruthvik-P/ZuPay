@@ -19,6 +19,8 @@ app.use(express.json());
 app.use(cookieParser());
 app.use('/uploads', express.static(__dirname + '/uploads'));
 
+const PORT = process.env.PORT || 4000;
+
 mongoose.connect('mongodb+srv://blog:blog12345678@cluster0.6j08n.mongodb.net/');
 
 app.post('/register', async (req,res) => {
